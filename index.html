@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE - Premium Fashion</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Juliet's Clothing</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Shop</a></7li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#order">Order</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" onclick="toggleCart()">
+                    🛒 Cart
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1>Premium Fashion</h1>
+            <p>Discover timeless pieces that define your unique style and elevate your wardrobe</p>
+            <a href="#products" class="cta-btn">Shop Collection</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="section-title">
+            <h2>Featured Collection</h2>
+            <p>Curated pieces for the modern wardrobe</p>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterProducts('all')">All Items</button>
+            <button class="filter-btn" onclick="filterProducts('men')">Men's</button>
+            <button class="filter-btn" onclick="filterProducts('women')">Women's</button>
+            <button class="filter-btn" onclick="filterProducts('accessories')">Accessories</button>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+            <!-- Products will be loaded by JavaScript -->
+        </div>
+    </section>
+    <!-- ordersection -->
+<section id="order">
+    <h2>Place Your Order</h2>
+    <form class="order-form" id="orderForm">
+        <label>Your Name</label>
+        <input type="text" id="name" required>
+
+        <label>Select Outfit</label>
+        <select id="outfit">
+            <option>Elegant Ankara Dress</option>
+            <option>Men’s Smart Suit</option>
+            <option>Casual Two-Piece Set</option>
+        </select>
+
+        <label>Preferred Color</label>
+        <input type="text" id="color" placeholder="e.g. wine red, navy blue" required>
+
+        <label>Size</label>
+        <select id="size">
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+            <option>Custom Measurement</option>
+        </select>
+
+        <label>Additional Notes</label>
+        <textarea id="notes" rows="3" placeholder="e.g. I want it sleeveless with a short 
+skirt."></textarea>
+
+        <button type="button" onclick="sendWhatsApp()">Order via WhatsApp</button>
+        <button type="button" onclick="sendEmail()">Send Order Email</button>
+    </form>
+</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#returns">Returns & Exchanges</a>
+                <a href="#shipping">Shipping Info</a>
+                <a href="contact">Customer Support</a>
+            </div>
+            <p>&copy; 2025 LUXE Premium Fashion. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src = "js/index.js">
+
+    </script>
+</body>
+
+</html>
